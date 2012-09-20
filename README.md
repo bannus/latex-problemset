@@ -7,6 +7,7 @@ Custom LaTeX document class for doing problem sets.
 
 	\documentclass[letterpaper]{problemset}
 
+	\newcommand{\institutionName}{Harvard University}
 	\newcommand{\studentName}{Bannus Van der Kloot}
 	\newcommand{\className}{Applied Math 120}
 

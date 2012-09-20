@@ -1,15 +1,15 @@
-%%% Document class for problem sets
-%%% Adapted by Bannus Van der Kloot from CS121
-%%% Original Header:
-%%% Much of this file was stolen from psinclude.tex, which included
-%%%   LaTeX code writen by Bob Walton and Craig Silverstein, and edited
-%%%   at various times by Adam Deaton and Ben Wildasin.  This document
-%%%   class is originally due to Robert Haas.
-%%%
-
+%%%%%
+% Document class for problem sets
+% Adapted by Bannus Van der Kloot from CS121
+% Original Header:
+% Much of this file was stolen from psinclude.tex, which included
+%   LaTeX code writen by Bob Walton and Craig Silverstein, and edited
+%   at various times by Adam Deaton and Ben Wildasin.  This document
+%   class is originally due to Robert Haas.
+%%
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{problemset}
+\ProvidesClass{problemset}[2012/09/20 Class for college problem sets]
 
 %%% Create some appropriately named counters.
 \newcounter{Problem}
@@ -19,7 +19,6 @@
 \newcounter{SubproblemX}
 \newcounter{SubsolutionX}
 \newcommand{\nextproblem}[1]{\setcounter{Problem}{#1}}
-
 
 %%% Generic header.  This gets redefined if the 'ps' or 'solution' options
 %%% are specified.
@@ -72,7 +71,7 @@
 {
   \setlength{\parskip}{0.0in}      % Use late date NONE for no lateness.
   \begin{center}
-    {\large \bf Harvard University}\\
+    {\large \bf \institutionName}\\
     {\bf \className}\\
 
     \medskip
