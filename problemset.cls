@@ -78,10 +78,8 @@
     {\bf Problem Set #1}\\
 
     \medskip
-    {\sf Due #2.\\
-     \printStudentName  
-    } % end of \sf
-    %    \setlength{\parskip}{\theparskip}
+    Due #2.\\
+    \printStudentName  
   \end{center}
 }      % end definition of \header
 
@@ -101,7 +99,7 @@
 {
   \p
   \stepcounter{Subproblem}
-  {\sf (\ifthenelse{\value{Subproblem}<27}{\Alph{Subproblem}}%
+  {(\ifthenelse{\value{Subproblem}<27}{\Alph{Subproblem}}%
   {\setcounter{SubproblemX}{\value{Subproblem}}%
   \addtocounter{SubproblemX}{-26}\Alph{SubproblemX}%
       \Alph{SubproblemX}})}
