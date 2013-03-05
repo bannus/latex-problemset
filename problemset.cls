@@ -2,10 +2,13 @@
 % Document class for problem sets
 % Adapted by Bannus Van der Kloot from CS121
 % Original Header:
-% Much of this file was stolen from psinclude.tex, which included
+%   Much of this file was stolen from psinclude.tex, which included
 %   LaTeX code writen by Bob Walton and Craig Silverstein, and edited
 %   at various times by Adam Deaton and Ben Wildasin.  This document
 %   class is originally due to Robert Haas.
+% Include graphics or code with the following:
+% \lstinputlisting{code.c}
+% \includegraphics[width=400px]{picture.png}
 %%
 
 \NeedsTeXFormat{LaTeX2e}
@@ -20,18 +23,21 @@
 \newcounter{SubsolutionX}
 \newcommand{\nextproblem}[1]{\setcounter{Problem}{#1}}
 
-%%% Generic header.  This gets redefined if the 'ps' or 'solution' options
-%%% are specified.
-\newcommand{\header}[1]
+\newcommand{\header}[2]         % 2 ARGUMENTS: ps #, due date
 {
+  \setlength{\parskip}{0.0in}      % Use late date NONE for no lateness.
   \begin{center}
-    {\large \bf Harvard University}\\
+    {\large \bf \institutionName}\\
     {\bf \className}\\
 
     \medskip
-    {\bf #1}
+    {\bf Problem Set #1}\\
+
+    \medskip
+    Due #2.\\
+    \printStudentName  
   \end{center}
-}
+}      % end definition of \header
 
 \newcommand{\printStudentName}
 {
@@ -66,22 +72,6 @@
 { % On leaving environment.
    \end{problem*}
 }
-
-\renewcommand{\header}[2]         % 2 ARGUMENTS: ps #, due date
-{
-  \setlength{\parskip}{0.0in}      % Use late date NONE for no lateness.
-  \begin{center}
-    {\large \bf \institutionName}\\
-    {\bf \className}\\
-
-    \medskip
-    {\bf Problem Set #1}\\
-
-    \medskip
-    Due #2.\\
-    \printStudentName  
-  \end{center}
-}      % end definition of \header
 
 \renewcommand{\problem}[1]         % ONE ARGUMENT: point value of problem
 {
@@ -187,6 +177,9 @@
 \newcommand{\TSAT}{\mathprob{3-SAT}}
 \newcommand{\ILP}{\mathprob{ILP}}
 
+\newcommand\note[1]{\textbf{\color{red}[[\textit{#1}]]}}
+\newcommand\todo[1]{\note{TODO: #1}}
+
 
 %\renewcommand{\or}{\vee}
 %\renewcommand{\and}{\wedge}
@@ -253,6 +246,4 @@
   showstringspaces=false
  }
 
-% Include graphics or code with the following:
-%\lstinputlisting{code.c}
-%\includegraphics[width=400px]{picture.png}
+
